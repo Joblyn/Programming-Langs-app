@@ -1,3 +1,3 @@
 export const HOME = "/";
-export const JAVASCRIPT = "javascritpt";
+export const JAVASCRIPT = "javascript";
 export const PYTHON = "python";

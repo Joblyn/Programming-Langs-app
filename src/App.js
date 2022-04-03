@@ -7,8 +7,8 @@ function App() {
   return (
     <Routes>
       <Route path={ROUTES.HOME} element={<Home />} />
-      <Route path={ROUTES.JAVASCRIPT} element={<Javascript />} />
-      <Route path={ROUTES.PYTHON} element={<Python />} />      
+      <Route path={ROUTES.JAVASCRIPT} exact element={<Javascript />} />
+      <Route path={ROUTES.PYTHON} exact element={<Python />} />      
     </Routes>
   );
 }
