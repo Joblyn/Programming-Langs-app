@@ -1,4 +1,4 @@
-import Python from "../assets/images/python.jpeg";
+import Python from "../assets/images/python.png";
 import Hld from "../assets/images/hld.png";
 import Algorithms from "../assets/images/algorithms.png";
 import Java from "../assets/images/java.jpeg";
@@ -11,37 +11,44 @@ const LanguageArray = [
   {
     "title": "Python",
     "image": Python,
-    "alt": "python"
+    "alt": "python",
+    "href": "/python"
   },
   {
-    "title": "HighLevelDesign",
+    "title": "High Level Design",
     "image": Hld,
-    "alt": "high level design"
+    "alt": "high level design",
+    "href": "/highleveldesign"
   },
   {
     "title": "Algorithms",
     "image":Algorithms,
-    "alt": "algorithms"
+    "alt": "algorithms",
+    "href": "/algorithms"
   },
   {
     "title": "Java",
     "image": Java,
-    "alt": "Java"
+    "alt": "Java",
+    "href": "/java"
   },
   {
-    "title": "MultiThreading",
+    "title": "Multi Threading",
     "image": MultiThreading,
-    "alt": "multithreading"
+    "alt": "multithreading",
+    "href": "/multithreading"
   },
   {
-    "title": "MachineLearning",
+    "title": "Machine Learning",
     "image": MachineLearning,
-    "alt": "machine learning"
+    "alt": "machine learning",
+    "href": "/machine-learning"
   },
   {
-    "title": "Docker&Kubenetes",
+    "title": "Docker & Kubenetes",
     "image": DockerKubenetes,
-    "alt": "docker & kubernetes"
+    "alt": "docker & kubernetes",
+    "href": "/docker_kubernetes"
   }
 ]
 

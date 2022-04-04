@@ -5,19 +5,20 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export default function CustomCard({ title, image, alt, ...restProps}) {
+export default function CustomCard({ title, image, alt, href, ...restProps}) {
   return (
-    <Card sx={{ maxWidth: 345 }} {...restProps}>
-      <CardActionArea>
+    <Card sx={{ maxWidth: 345 }} {...restProps} className="w-80">
+      <CardActionArea href={href}>
         <CardMedia
           component="img"
           width="345"
           height="140"
           image={image}
           alt={alt}
+          style={{height: 200}}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent className="bg-white">
+          <Typography gutterBottom variant="p" component="div" className="text-xl"> 
             {title}
           </Typography>
         </CardContent>
