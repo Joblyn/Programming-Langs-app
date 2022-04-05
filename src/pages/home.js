@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CustomCard from "../components/card/card";
 import Header from "../components/header/header";
 import PageLoader from "../components/pageloader/pageloader";
-import Languages from "../fixtures/languages";
+import Languages from "../data/languages";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 

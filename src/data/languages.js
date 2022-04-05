@@ -6,7 +6,6 @@ import MultiThreading from "../assets/images/multithreading.png";
 import MachineLearning from "../assets/images/machinelearning.jpeg";
 import DockerKubenetes from "../assets/images/docker-kubernetes.png";
 
-
 const LanguageArray = [
   {
     "title": "Python",
