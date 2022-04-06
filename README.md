@@ -16,4 +16,6 @@ A web application to assess user's knowledge of programming languages and offer 
     ```
 
 
-![Home page](./screenshot.png)
+![Home page](./screenshots/home.png)
+![Name page](./screenshots/name.png)
+![quiz page](./screenshots/quiz.png)

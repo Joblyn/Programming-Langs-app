@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Familjen+Grotesk&display=swap');
 
 html, body {
   margin: 0;
@@ -13,12 +13,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Darker Grotesque', sans-serif;
+  /* font-family: 'Familjen Grotesk', sans-serif; */
   font-style: normal;
   font-weight: normal;
   overflow-x: hidden;
+  letter-spacing: 1px;
 }
 
 * {
   transition: all .12s cubic-bezier(.17, .67, .83, .67);
   box-sizing: border-box;
+}
+
+.page_container {
+  background-image: url("https://dl7bo1dy930sf.cloudfront.net/img/quiz/bg-green-icon2.svg");
+  background-size: 340px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position-x: -100px;
+  background-position-y: bottom;
 }

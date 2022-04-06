@@ -3,8 +3,8 @@ import CustomCard from "../components/card/card";
 import Header from "../components/header/header";
 import PageLoader from "../components/pageloader/pageloader";
 import Languages from "../data/languages";
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -34,7 +34,14 @@ export default function Home() {
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
             {Languages.map((lang, id) => (
-              <Grid item xs={4} sm={4} md={4} key={`lang_${lang}_${id}`} className="flex justify-center items-start">
+              <Grid
+                item
+                xs={4}
+                sm={4}
+                md={4}
+                key={`lang_${lang}_${id}`}
+                className="flex justify-center items-start"
+              >
                 <CustomCard
                   title={lang.title}
                   image={lang.image}
