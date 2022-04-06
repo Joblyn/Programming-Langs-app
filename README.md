@@ -10,10 +10,10 @@ A web application to assess user's knowledge of programming languages and offer 
 - ``` npm start ```
 
 ### Deploymen (heroku)
--```git add .
+- `git add .
     git commit -m <your comment>
     git push heroku main
-    ```
+    `
 
 
 ![Home page](./screenshots/home.png)
