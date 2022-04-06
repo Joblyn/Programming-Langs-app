@@ -16,7 +16,7 @@ export default function Button({ outline, href, children }) {
 
 export const OptButton = ({ action, innerText, href, ...restProps }) => {
   return (
-    <Link to="/java">
+    <div>
       <div
         className={`w-80 text-black-primary bg-white border border-green
         cursor-pointer p-2 text-lg flex justify-center items-center  rounded-md my-2 btn hover:bg-green hover:text-white`}
@@ -27,7 +27,7 @@ export const OptButton = ({ action, innerText, href, ...restProps }) => {
           {innerText}
         </span>
       </div>
-    </Link>
+    </div>
   );
 };
 

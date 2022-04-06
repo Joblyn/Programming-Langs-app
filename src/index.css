@@ -24,12 +24,3 @@ body {
   transition: all .12s cubic-bezier(.17, .67, .83, .67);
   box-sizing: border-box;
 }
-
-.page_container {
-  background-image: url("https://dl7bo1dy930sf.cloudfront.net/img/quiz/bg-green-icon2.svg");
-  background-size: 340px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position-x: -100px;
-  background-position-y: bottom;
-}

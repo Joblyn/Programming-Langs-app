@@ -1,8 +1,15 @@
 .page_container {
-  background-image: url("https://dl7bo1dy930sf.cloudfront.net/img/quiz/bg-green-icon2.svg");
-  background-size: 340px;
+  background-image: url(https://dl7bo1dy930sf.cloudfront.net/img/quiz/bg-green-icon2.svg);
+  background-size: 800px;
   background-color: #fff;
   background-repeat: no-repeat;
-  background-position-x: -100px;
-  background-position-y: bottom;
+  background-position-x: 200px;
+  background-position-y: 50px;
+  padding-bottom: unset;
+}
+
+@media (min-width: 1024px) {
+  .page_container {
+    background-position-x: 520px;
+  }
 }

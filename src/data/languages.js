@@ -8,6 +8,12 @@ import DockerKubenetes from "../assets/images/docker-kubernetes.png";
 
 const LanguageArray = [
   {
+    "title": "Java",
+    "image": Java,
+    "alt": "Java",
+    "href": "/java"
+  },
+  {
     "title": "Python",
     "image": Python,
     "alt": "python",
@@ -24,12 +30,6 @@ const LanguageArray = [
     "image":Algorithms,
     "alt": "algorithms",
     "href": "/algorithms"
-  },
-  {
-    "title": "Java",
-    "image": Java,
-    "alt": "Java",
-    "href": "/java"
   },
   {
     "title": "Multi Threading",
