@@ -3,13 +3,14 @@ import logo from "../../assets/images/logo.svg";
 import Button from "../button/button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
+import "./header.scss";
 
 export default function Header() {
   const matches = useMediaQuery("(min-width:640px)");
   const [showBtns, setShowBtns] = React.useState(false);
 
   return (
-    <div className="flex flex-row justify-between px-2 md:px-4 py-3 shadow-sm border-green border-b fixed top-0 z-30 w-full bg-white">
+    <div className="flex flex-row justify-between px-2 md:px-4 py-3 shadow-sm border-green border-b fixed top-0 z-30 w-full bg-white header_grid">
       <div className="w-fit">
         <a href="/">
           <img
@@ -26,13 +27,11 @@ export default function Header() {
       </div>
       {matches ? (
         <div className="flex justify-center items-start">
-          <Button outline href="/signin">
-            Sign In
-          </Button>
+          <Button outline href="/signin">Sign In</Button>
           <Button href="/signup">Sign Up</Button>
         </div>
       ) : (
-        <div className="relative">
+        <div className="relative flex justify-end">
           <span className="toggle">
             <FormatAlignJustifyIcon
               className="text-green"
@@ -42,7 +41,7 @@ export default function Header() {
 
           {showBtns && (
             <div
-              className={`flex flex-col justify-center w-28 h-fit p-2 shadow-sm shadow-green gap-2 absolute z-50 bg-white -left-24 top-[100%]`}
+              className={`flex flex-col justify-center w-28 h-fit p-2 shadow-sm shadow-green gap-2 absolute z-50 bg-white top-[100%]`}
             >
               <Button outline href="/signin">
                 Sign In

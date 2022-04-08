@@ -1,12 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Button({ outline, href, children }) {
+export default function Button({ outline, href, children, large }) {
+  if (large) {
+    return (
+      <Link
+      className={`btn rounded-md p-3 mx-1 md:mx-2 ${
+        outline ? "bg-white text-green" : "bg-green text-white"
+      } border border-green cursor-pointer transition-all hover:bg-lightgreen hover:text-green inline-flex items-center justify-center select-none text-center shadow-md md:w-80 w-52 uppercase text-2xl font-bold animation_click`}
+      to={href}
+    >
+      {children}
+    </Link>
+    )
+  }
   return (
     <a
-      className={`btn rounded-md px-1.5 md:px-6 py-1 md:py-1.5 mx-1 md:mx-2 ${
+      className={`btn rounded-md px-1.5 md:px-2 py-1 md:py-1.5 mx-1 md:mx-2 ${
         outline ? "bg-white text-green" : "bg-green text-white"
-      } border border-green text-sm md:text-base cursor-pointer transition-all inline-flex items-center justify-center select-none text-center shadow-md`}
+      } border border-green text-sm md:text-base hover:bg-lightgreen hover:text-green cursor-pointer transition-all inline-flex items-center justify-center select-none text-center md:h-10 w-20 shadow-md`}
       href={href}
     >
       {children}
@@ -19,7 +31,7 @@ export const OptButton = ({ action, innerText, href, ...restProps }) => {
     <div>
       <div
         className={`w-80 text-black-primary bg-white border border-green
-        cursor-pointer p-2 text-lg flex justify-center items-center  rounded-md my-2 btn hover:bg-green hover:text-white`}
+        cursor-pointer p-2 text-lg flex justify-center items-center rounded-md my-2 btn hover:bg-green hover:text-white`}
         onClick={action}
         {...restProps}
       >

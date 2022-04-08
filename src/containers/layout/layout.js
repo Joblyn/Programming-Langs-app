@@ -2,8 +2,7 @@ import React from "react";
 import "./layout.scss";
 import { Routes, Route } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import { Javascript, Python, Java } from "../../pages";
-import Name from "../../pages/name";
+import { Javascript, Python, Java, Name } from "../../pages";
 
 export default function Layout() {
   return (

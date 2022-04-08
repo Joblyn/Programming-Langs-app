@@ -12,7 +12,7 @@ export default function CustomCard({ title, image, alt, href, ...restProps}) {
   const { setRoute } = React.useContext(RouteContext);  
   const handleAction = () => {
     setRoute(href);
-    navigate("/name");
+    navigate("assessment/name");
   }
 
   return (

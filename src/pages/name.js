@@ -46,7 +46,7 @@ export default function Name() {
         <div className="flex">
           <NextButton
             disabled={disabled}
-            onClick={disabled ? null : () => navigate(route)}
+            onClick={disabled ? null : () => navigate(`/assessment/${route}`)}
             innerText="Next"
           />
         </div>

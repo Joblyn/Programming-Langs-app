@@ -11,43 +11,43 @@ const LanguageArray = [
     "title": "Java",
     "image": Java,
     "alt": "Java",
-    "href": "/java"
+    "href": "java"
   },
   {
     "title": "Python",
     "image": Python,
     "alt": "python",
-    "href": "/python"
+    "href": "python"
   },
   {
     "title": "High Level Design",
     "image": Hld,
     "alt": "high level design",
-    "href": "/highleveldesign"
+    "href": "highleveldesign"
   },
   {
     "title": "Algorithms",
     "image":Algorithms,
     "alt": "algorithms",
-    "href": "/algorithms"
+    "href": "algorithms"
   },
   {
     "title": "Multi Threading",
     "image": MultiThreading,
     "alt": "multithreading",
-    "href": "/multithreading"
+    "href": "multithreading"
   },
   {
     "title": "Machine Learning",
     "image": MachineLearning,
     "alt": "machine learning",
-    "href": "/machine-learning"
+    "href": "machine-learning"
   },
   {
     "title": "Docker & Kubenetes",
     "image": DockerKubenetes,
     "alt": "docker & kubernetes",
-    "href": "/docker_kubernetes"
+    "href": "docker_kubernetes"
   }
 ]
 
