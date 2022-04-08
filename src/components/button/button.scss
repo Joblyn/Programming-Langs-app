@@ -1,0 +1,33 @@
+.opt-cont {
+  &.checked {
+    background: #7BC4AB;
+    color:#fff;
+    .opt-label::before {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.opt-label {
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    height: 17px;
+    width: 17px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 1px rgba(123, 196, 171, 0.3);
+    box-shadow: 0 0 0 1px rgba(123, 196, 171, 0.3);
+  }
+  &:hover {
+    &:before {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 1);
+    }
+  }
+  .checked-icon {
+    width:15px;
+    position: absolute;
+  }
+}

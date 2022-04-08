@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Familjen+Grotesk&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Familjen+Grotesk&display=swap");
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -12,7 +13,7 @@ body {
   font-smooth: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: "Darker Grotesque", sans-serif;
   /* font-family: 'Familjen Grotesk', sans-serif; */
   font-style: normal;
   font-weight: normal;
@@ -21,7 +22,7 @@ body {
 }
 
 * {
-  transition: all .12s cubic-bezier(.17, .67, .83, .67);
+  transition: all 0.12s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   box-sizing: border-box;
 }
 
@@ -48,4 +49,11 @@ body {
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+.css-eglki6-MuiLinearProgress-root {
+  background-color: #eff9f4 !important;
+}
+.css-5xe99f-MuiLinearProgress-bar1 {
+  background-color: #7bc4ab !important;
 }

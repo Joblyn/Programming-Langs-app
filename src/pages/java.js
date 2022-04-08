@@ -1,31 +1,21 @@
 import React, { useState } from "react";
 import data from "../data/java(new).json";
 import NameIcon from "../assets/images/name_icon.svg";
-import { OptButton } from "../components/button/button";
+import ProgressLine from "../components/progress/progressline";
+import Question from "../components/question/question";
 
 export default function Java() {
-  const [count, updateCount] = useState(0);
-  const recordAnswer = () => {
-    if (count === data.length - 1) {
-      return null;
-    } else {
-      updateCount(count + 1);
-    }
-  };
-  const createComponent = (question) => {
+  const [count, updateCount] = useState(Number(0));
+  const createCommponent = () => {
     return (
-      <>
-        <div className="h-16 mb-5">
-          <h3 className="font-bold text-2xl md:text-3xl">{question}</h3>
-        </div>
-        <div className="mt-20">
-          <OptButton action={recordAnswer} innerText="I know" />
-          <OptButton action={recordAnswer} innerText="I don't know" />
-        </div>
-      </>
+      <Question
+        updateCount={updateCount}
+        count={count}
+        question={data[count]}
+        totalCount={data.length}
+      />
     );
   };
-
   return (
     <div className="w-full">
       <div className="flex items-center my-2 w-full">
@@ -35,24 +25,9 @@ export default function Java() {
         <span className="uppercase text-green text-lg font-bold ">
           JAVA ASSESSMENT
         </span>
-        <span className="ml-auto text-xl">
-          {count + 1}/{data.length}
-        </span>
       </div>
-      {createComponent(data[count])}
-      {/* <div className="mt-[5.5rem]">
-        <NextButton
-          disabled={!count}
-          action={() =>
-            count
-              ? updateCount(count--)
-              : count === data[data.length - 1]
-              ? submit()
-              : updateCount(count-1)
-          }
-          innerText={count === data[data.length - 1] ? "Submit" : "Back"}
-        />
-      </div> */}
+      <ProgressLine count={count} totalCount={data.length} />
+      {createCommponent()}
     </div>
   );
 }

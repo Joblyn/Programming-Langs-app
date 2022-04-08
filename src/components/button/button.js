@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./button.scss";
+import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
 export default function Button({ outline, href, children, large }) {
   if (large) {
@@ -26,19 +28,19 @@ export default function Button({ outline, href, children, large }) {
   );
 }
 
-export const OptButton = ({ action, innerText, href, ...restProps }) => {
+export const OptButton = ({ action, innerText, href, name, value, checked, setChecked, ...restProps }) => {
   return (
-    <div>
-      <div
-        className={`w-80 text-black-primary bg-white border border-green
-        cursor-pointer p-2 text-lg flex justify-center items-center rounded-md my-2 btn hover:bg-green hover:text-white`}
-        onClick={action}
+    <div className={`w-80 rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative opt-cont ${(checked === value) ? "checked" : ""} opt-cont`}>
+      <label
+        className={`w-full p-2.5 opt-label cursor-pointer relative`}
+        onClick={() => setChecked(value)}
         {...restProps}
-      >
-        <span className="px-[7px] font-bold tracking-wider">
-          {innerText}
+      > 
+        {checked === value && <CheckOutlinedIcon className="checked-icon text-white absolute"/>}
+        <span className="font-bold tracking-wider w-full text-center">
+          {value}
         </span>
-      </div>
+      </label>
     </div>
   );
 };
