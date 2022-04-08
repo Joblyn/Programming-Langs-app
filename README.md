@@ -14,6 +14,6 @@ A web application to assess user's knowledge of programming languages and offer 
     git commit -m <your comment>
     git push heroku main
     `
-
-![Name page](./screenshots/name.png)
-![quiz page](./screenshots/quiz.png)
+    
+![quiz (first) page](./screenshots/quiz-first.png)
+![quiz page](./screenshots/quiz-last.png)
