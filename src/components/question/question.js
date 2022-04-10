@@ -31,7 +31,7 @@ export default function Question(props) {
         <NextButton
           innerText={count === (totalCount-1) ? "Finish" : "Next"}
           disabled={checked === ""}
-          action={count === (totalCount-1) ? null : nextQuestion}
+          action={(count !== totalCount-1) ? ( checked !== "") ? nextQuestion : null : null }
         />
       </div>
     </div>
