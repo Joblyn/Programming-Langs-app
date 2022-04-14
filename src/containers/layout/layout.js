@@ -15,7 +15,7 @@ export default function Layout() {
           <Route path={ROUTES.PYTHON} exact element={<Python />} />
         </Routes>
       </div>
-      <div className="hidden md:block w-[40%] bg-lightgreen h-screen"></div>
+      <div className="hidden md:block w-[40%] bg-lightgreen min-h-screen"></div>
     </main>
   );
 }

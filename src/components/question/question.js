@@ -1,37 +1,47 @@
-import React, { useState } from "react";
-import { NextButton, OptButton } from "../button/button";
+import React, { useState,useEffect } from "react";
+import { OptButton } from "../button/button";
 
 export default function Question(props) {
-  const { updateCount, question, totalCount, count } = props;
+  const { question, setResponses, id,clicked } = props;
   const [checked, setChecked] = useState("");
-  const nextQuestion = () => {
-    updateCount((count) => count + 1);
-    setChecked("");
-  };
+  useEffect(() => {
+    clicked && setChecked("");
+  }, [clicked]);
+  let prop = "question_" + id;
+
   return (
-    <div>
-      <div className="h-16 mb-5">
-        <h3 className="font-bold text-2xl md:text-3xl">{question}</h3>
+    <div className="mb-4">
+      <div className="mb-4 flex flex-row items-start">
+        <span className="text-xl mr-3 mt-1">{id + 1}.</span>
+        <h3 className="font-bold text-2xl ">{question}</h3>
       </div>
-      <div className="mt-20">
+      <div className="mt-2 ml-6" >
         <OptButton
           value="I know"
           name="options"
           checked={checked}
-          setChecked={setChecked}
+          action={() => {
+            setChecked("I know");
+            setResponses((responses) => {
+              let newResponses = {...responses};
+              newResponses[prop] = "I know"
+              return newResponses;
+            });
+          }}
         />
         <OptButton
-          value="I dont't know"
+          value="I don't know"
           name="options"
           checked={checked}
-          setChecked={setChecked}
-        />
-      </div>
-      <div className="mt-[5rem]">
-        <NextButton
-          innerText={count === (totalCount-1) ? "Finish" : "Next"}
-          disabled={checked === ""}
-          action={(count !== totalCount-1) ? ( checked !== "") ? nextQuestion : null : null }
+          // setChecked={() => setChecked("I don't know")}
+          action={() => {
+            setChecked("I don't know");
+            setResponses((responses) => {
+              let newResponses = {...responses};
+              newResponses[prop] = "I don't know"
+              return newResponses;
+            });
+          }}
         />
       </div>
     </div>

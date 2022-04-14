@@ -33,7 +33,7 @@ export const OptButton = ({ action, innerText, href, name, value, checked, setCh
     <div className={`w-80 rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative opt-cont ${(checked === value) ? "checked" : ""} opt-cont`}>
       <label
         className={`w-full p-2.5 opt-label cursor-pointer relative`}
-        onClick={() => setChecked(value)}
+        onClick={action}
         {...restProps}
       > 
         {checked === value && <CheckOutlinedIcon className="checked-icon text-white absolute"/>}

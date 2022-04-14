@@ -11,7 +11,7 @@ function LinearProgressWithLabel(props) {
       </Box>
       <Box sx={{ minWidth: 35 }}>
         <span className="ml-auto text-xl">
-          {count+1}/{totalCount}
+          {count}/{totalCount}
         </span>
       </Box>
     </Box>
@@ -20,11 +20,17 @@ function LinearProgressWithLabel(props) {
 
 export default function ProgressLine(props) {
   const { count, totalCount } = props;
-  const value = Math.round((100 / totalCount) * (count+1));
+  const value = Math.round((100 / totalCount) * (count));
+  console.log("totalCount", totalCount);
+  console.log("count", count);
 
   return (
     <Box sx={{ width: "100%" }}>
-      <LinearProgressWithLabel value={value} count={count} totalCount={totalCount} />
+      <LinearProgressWithLabel
+        value={value}
+        count={count}
+        totalCount={totalCount}
+      />
     </Box>
   );
 }
