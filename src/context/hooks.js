@@ -1,4 +1,4 @@
-export const useRouteContext = (value = null) => {
+export const useAppContext = (value = null) => {
   let route = value;
   return route;
 };

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import NameIcon from "../assets/images/name_icon.svg";
-import { NextButton } from "../components/button/button";
-import { RouteContext } from "../context/context";
-import { useNavigate} from "react-router";
+import { LargeButton } from "../components/button/button";
+import { AppContext } from "../context/context";
+import { useNavigate } from "react-router";
 
 export default function Name() {
-  const { route } = useContext(RouteContext);
-  const { setName } = useContext(RouteContext);
-  const navigate= useNavigate();
+  const { route } = useContext(AppContext);
+  const { setName } = useContext(AppContext);
+  const navigate = useNavigate();
   const [disabled, setDisabled] = useState(true);
 
   const setButtonDisabled = ({ target }) => {
@@ -20,7 +20,7 @@ export default function Name() {
   };
 
   return (
-    <div>
+    <div className="pt-10">
       <div className="flex items-center">
         <span className="align-middle mr-3">
           <img src={NameIcon} alt="_logo_" className="w-10 h-10" />
@@ -39,12 +39,13 @@ export default function Name() {
           type="text"
           name="name_input"
           id="name_input"
-          className="w-full md:w-80 bg-white text-2xl placeholder:text-opacity-50 tracking-wider placeholder:tracking-wider placeholder:text-black-primary p-3 rounded-md border border-green text-black-primary my-3 font-bold focus:outline-0 focus:outline-offset-0" 
+          className="w-full md:w-80 bg-white text-2xl placeholder:text-opacity-50 tracking-wider placeholder:tracking-wider placeholder:text-black-primary p-3 rounded-md border border-green text-black-primary my-3 font-bold focus:outline-0 focus:outline-offset-0"
           onChange={setButtonDisabled}
           placeholder="Your name"
         />
         <div className="flex">
-          <NextButton
+          <LargeButton
+            type="next"
             disabled={disabled}
             onClick={disabled ? null : () => navigate(`/assessment/${route}`)}
             innerText="Next"

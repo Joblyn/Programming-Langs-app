@@ -3,7 +3,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Box from "@mui/material/Box";
 
 function LinearProgressWithLabel(props) {
-  const { count, totalCount } = props;
+  const { count, totalcount } = props;
   return (
     <Box sx={{ display: "flex", width: "100%", alignItems: "center" }}>
       <Box sx={{ width: "100%", mr: 1 }}>
@@ -11,7 +11,7 @@ function LinearProgressWithLabel(props) {
       </Box>
       <Box sx={{ minWidth: 35 }}>
         <span className="ml-auto text-xl">
-          {count}/{totalCount}
+          {count}/{totalcount}
         </span>
       </Box>
     </Box>
@@ -19,17 +19,15 @@ function LinearProgressWithLabel(props) {
 }
 
 export default function ProgressLine(props) {
-  const { count, totalCount } = props;
-  const value = Math.round((100 / totalCount) * (count));
-  console.log("totalCount", totalCount);
-  console.log("count", count);
+  const { count, totalcount } = props;
+  const value = Math.round((100 / totalcount) * (count));
 
   return (
     <Box sx={{ width: "100%" }}>
       <LinearProgressWithLabel
         value={value}
         count={count}
-        totalCount={totalCount}
+        totalcount={totalcount}
       />
     </Box>
   );

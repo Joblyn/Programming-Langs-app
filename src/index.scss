@@ -14,7 +14,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Darker Grotesque", sans-serif;
-  /* font-family: 'Familjen Grotesk', sans-serif; */
   font-style: normal;
   font-weight: normal;
   overflow-x: hidden;
@@ -22,27 +21,27 @@ body {
 }
 
 * {
-  transition: all 0.12s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  // transition: all 0.12s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   box-sizing: border-box;
 }
 
-.animation_click {
-  position: relative;
-  transition-duration: 0.1s;
-}
-.animation_click:after {
-  content: "";
-  background: inherit;
-  position: absolute;
-  // padding-top: 300%;
-  // padding-left: 350%;
-  margin-left: -20px;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s;
-  display: block;
-  border-radius: 50%;
-}
+// .animation_click {
+//   position: relative;
+//   transition-duration: 0.1s;
+// }
+// .animation_click:after {
+//   content: "";
+//   background: inherit;
+//   position: absolute;
+//   // padding-top: 300%;
+//   // padding-left: 350%;
+//   margin-left: -20px;
+//   margin-top: -120%;
+//   opacity: 0;
+//   transition: all 0.8s;
+//   display: block;
+//   border-radius: 50%;
+// }
 
 .animation_click:active:after {
   padding: 0;
@@ -50,10 +49,53 @@ body {
   opacity: 1;
   transition: 0s;
 }
-
+// local material ui progress bar
 .css-eglki6-MuiLinearProgress-root {
   background-color: #eff9f4 !important;
 }
 .css-5xe99f-MuiLinearProgress-bar1 {
   background-color: #7bc4ab !important;
+}
+
+// production material ui progress bar
+.css-7p5u54 {
+  background-color: #eff9f4 !important;
+}
+.css-t752vm {
+  background-color: #7bc4ab !important;
+}
+
+.assessment_footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  -webkit-box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  padding: 8px 54px 9px;
+}
+
+@media (min-width: 600px) {
+  .assessment_footer {
+    padding: 0px 149px 17px;
+  }
+}
+
+.scroll_bar {
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 8px;
+    border: 1px solid #fff;
+  }
 }

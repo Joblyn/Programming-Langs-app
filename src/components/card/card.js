@@ -5,11 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useNavigate} from "react-router";
-import { RouteContext } from '../../context/context';
+import { AppContext } from '../../context/context';
 
 export default function CustomCard({ title, image, alt, href, ...restProps}) {
   const navigate = useNavigate();
-  const { setRoute } = React.useContext(RouteContext);  
+  const { setRoute } = React.useContext(AppContext);  
   const handleAction = () => {
     setRoute(href);
     navigate("assessment/name");
