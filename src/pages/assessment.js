@@ -4,42 +4,57 @@ import ProgressLine from "../components/progress/progressline";
 import { LargeButton } from "../components/button/button";
 import Question from "../components/question/question";
 import { useMediaQuery } from "@mui/material";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getQuestions } from "../utilities/redux/actions/questions";
 import Loader from "../components/loader/loader";
-import { updateResponses } from "../utilities/redux/actions/responses";
 
 export default function Assessment() {
+  const { language } = useParams();
   const [count, updateCount] = useState(1);
   const [startEnd, setStartEnd] = useState({ start: 0, end: 5 });
-  const responseStore = useSelector((state) => state.responses);
-  const [responses, setResponses] = useState({});
-  const [last, setLast] = useState(false);
   const [data, setData] = useState([]);
+
+  const [last, setLast] = useState(false);
   const remainder = data.length % 5;
   const quotient = parseInt(data.length / 5);
   const matches = useMediaQuery("(min-width:960px)");
-  const { language } = useParams();
   const dispatch = useDispatch();
-  const questions = useSelector((state) => state.questions);
-  const [error, setError] = useState({});
-  const navigate = useNavigate();
 
+  const questions = useSelector((state) => state.questions);
+  const [questionsState, setQuestionsState] = useState([]);
+
+  const responseStore = useSelector((state) => state.responses);
+  const [responses, setResponses] = useState({});
+
+  const [error, setError] = useState({});
+
+  // dispatch action to fetch questions and store at redux store
   useEffect(() => {
     dispatch(getQuestions());
   }, [language, dispatch]);
 
+  // store all language questions from redux store
   useEffect(() => {
     if (questions.isSuccessful) {
       setData(questions.data);
     }
     if (questions.isError) {
-      console.log(questions.error);
+      // console.log(questions.error);
       setError({ type: "fetch error", message: error });
     }
   }, [questions, error]);
 
+  // set current questions and responses sets
+  useEffect(() => {
+    if (startEnd.end === undefined) {
+      setQuestionsState(data.slice(startEnd.start));
+    } else {
+      setQuestionsState(data.slice(startEnd.start, startEnd.end));
+    }
+  }, [data, startEnd]);
+
+  // check if current questions set is the last and update state
   useEffect(() => {
     if (remainder === 0) {
       if (count === quotient) {
@@ -51,49 +66,59 @@ export default function Assessment() {
     }
   }, [count, remainder, quotient]);
 
+  // update state responses
+  useEffect(() => {
+    setResponses(function () {
+      let obj = {};
+      questionsState.forEach((question) => {
+        let prop = `question_${question.id}`;
+        obj = { ...obj, [prop]: responseStore[prop] || "" };
+      });
+      return obj;
+    });
+  }, [questionsState, responseStore]);
+
   const nextQuestionsSet = () => {
-    dispatch(updateResponses(responses));
+    // dispatch(updateResponses(responses));
     updateCount((count) => count + 1);
     if (remainder) {
       if (count === quotient) {
         setStartEnd(({ end }) => ({ start: end }));
         setLast(true);
-        setResponses({});
         setError({});
       }
     } else {
       setStartEnd(({ end }) => ({ start: end, end: end + 5 }));
-      setResponses({});
       setError({});
     }
-    navigate(`/assessment/${language}#top`);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   const previousQuestionSet = () => {
     updateCount((count) => count - 1);
     setStartEnd(({ start, end }) => ({ start: start - 5, end: end - 5 }));
     setError({});
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
-  useEffect(() => {
-    console.log(responses);
-  }, [responses]);
-
   const createCommponent = () => {
-    let questions;
     const getProps = (questions, id) => ({
       className: id === questions.length - 1 ? "pb-[173px] md:pb-[100px]" : "",
       key: "question_" + id,
     });
-    questions = data.slice(startEnd.start, startEnd.end);
-    if (startEnd.end === undefined && startEnd.start) {
-      questions = data.slice(startEnd.start);
-    }
-    return questions.map((question, id) => {
+    return questionsState.map((question, id) => {
       let propName = "question_" + question.id;
       return createElement(
         "div",
-        getProps(questions, id),
+        getProps(questionsState, id),
         <Question
           propName={propName}
           id={id}
@@ -117,7 +142,7 @@ export default function Assessment() {
           {`${language} assessment`}
         </span>
       </div>
-      {data.length ? (
+      {questionsState.length ? (
         <>
           <ProgressLine count={count} totalcount={quotient} />
           {createCommponent()}
@@ -140,7 +165,7 @@ export default function Assessment() {
             <LargeButton
               type="next"
               innerText={last ? "Finish" : "Next"}
-              disabled={incompleteResponses}
+              // disabled={incompleteResponses}
               action={
                 incompleteResponses
                   ? () =>

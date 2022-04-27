@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { updateResponses } from "../../utilities/redux/actions/responses";
 import { OptButton } from "../button/button";
 
 export default function Question(props) {
   const { propName, question, setResponses, id, defaultValue } = props;
-  const [checked, setChecked] = useState(defaultValue || "");
-
+  const [checked, setChecked] = useState(defaultValue);
   useEffect(() => {
     setChecked(defaultValue || "");
-    setResponses((state) => ({
-      ...state,
-      [propName]: defaultValue || "",
-    }));
-  }, [question, defaultValue, propName, setResponses]);
+  }, [question, defaultValue]);
+  const dispatch = useDispatch();
+
+  const clickAction = (choice) => {
+    setChecked(choice);
+    setResponses((state) => {
+      let newResponses = { ...state };
+      newResponses[propName] = choice;
+      return newResponses;
+    });
+    dispatch(updateResponses({ [propName]: choice }));
+  };
 
   return (
     <div className="mb-4">
@@ -26,14 +34,7 @@ export default function Question(props) {
             value={choice}
             name={propName}
             checked={checked}
-            action={() => {
-              setChecked(choice);
-              setResponses((state) => {
-                let newResponses = { ...state };
-                newResponses[propName] = choice;
-                return newResponses;
-              });
-            }}
+            action={() => clickAction(choice)}
           />
         ))}
       </div>
