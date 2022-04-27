@@ -146,39 +146,34 @@ export default function Assessment() {
         <>
           <ProgressLine count={count} totalcount={quotient} />
           {createCommponent()}
-          {error.type === "incomplete responses" && (
-            <p className="text-[red] text-base px-6">{error.message}</p>
-          )}
-          <div
-            className={`${
-              matches ? "px-6 pb-6" : "assessment_footer"
-            } flex gap-3`}
-          >
-            {count !== 1 && (
-              <LargeButton
-                type="back"
-                innerText={"Back"}
-                action={previousQuestionSet}
-              />
+          <div className={`${matches ? "px-6 pb-6" : "assessment_footer"}`}>
+            {error.type === "incomplete responses" && (
+              <p className="text-[red] text-base px-6">{error.message}</p>
             )}
-            {/* <a href="#top"> */}
-            <LargeButton
-              type="next"
-              innerText={last ? "Finish" : "Next"}
-              // disabled={incompleteResponses}
-              action={
-                incompleteResponses
-                  ? () =>
-                      setError({
-                        type: "incomplete responses",
-                        message: "Please fill in all fields",
-                      })
-                  : last
-                  ? null
-                  : nextQuestionsSet
-              }
-            />
-            {/* </a> */}
+            <div className="flex gap-3">
+              {count !== 1 && (
+                <LargeButton
+                  type="back"
+                  innerText={"Back"}
+                  action={previousQuestionSet}
+                />
+              )}
+              <LargeButton
+                type="next"
+                innerText={last ? "Finish" : "Next"}
+                action={
+                  incompleteResponses
+                    ? () =>
+                        setError({
+                          type: "incomplete responses",
+                          message: "Please fill in all fields",
+                        })
+                    : last
+                    ? null
+                    : nextQuestionsSet
+                }
+              />
+            </div>
           </div>
         </>
       ) : (
