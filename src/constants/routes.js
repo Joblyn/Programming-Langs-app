@@ -1,7 +1,5 @@
 export const HOME = "/";
-export const LANGS = "assessment";
-export const JAVASCRIPT = "javascript";
-export const PYTHON = "python";
-export const JAVA = "java";
+export const ASSESSMENT = "assessment";
+export const LANGUAGE = ":language";
 export const NAME = "name";
 export const NOMATCH = "*";

@@ -5,8 +5,15 @@ import Java from "../assets/images/java.jpeg";
 import MultiThreading from "../assets/images/multithreading.png";
 import MachineLearning from "../assets/images/machinelearning.jpeg";
 import DockerKubenetes from "../assets/images/docker-kubernetes.png";
+import ShellScripting from "../assets/images/shell_scripting.jpeg";
 
 const LanguageArray = [
+  {
+    "title": 'Shell Scripting',
+    "image": ShellScripting,
+    "alt": "Shell Scripting",
+    "href": "shell-scripting"
+  },
   {
     "title": "Java",
     "image": Java,

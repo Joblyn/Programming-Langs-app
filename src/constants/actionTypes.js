@@ -1,0 +1,6 @@
+export const GET_QUESTIONS = "GET_QUESTIONS";
+export const GET_QUESTIONS_ERROR = "GET_QUESTIONS_ERROR";
+
+export const GET_ERROR = "GET_ERROR";
+
+export const UPDATE_RESPONSES = "UPDATE_RESPONSES";

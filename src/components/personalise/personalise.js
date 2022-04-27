@@ -6,7 +6,7 @@ export default function Personalise() {
   const { name } = useContext(AppContext);
 
   return (
-    <div className="h-full pt-10">
+    <div className="h-full pt-10 w-full">
       <div className="mb-4">
         <img
           src={Canstack}

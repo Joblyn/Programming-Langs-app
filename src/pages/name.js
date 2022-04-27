@@ -3,6 +3,8 @@ import NameIcon from "../assets/images/name_icon.svg";
 import { LargeButton } from "../components/button/button";
 import { AppContext } from "../context/context";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+import * as Routes from "../constants/routes";
 
 export default function Name() {
   const { route } = useContext(AppContext);
@@ -23,7 +25,9 @@ export default function Name() {
     <div className="pt-10">
       <div className="flex items-center">
         <span className="align-middle mr-3">
-          <img src={NameIcon} alt="_logo_" className="w-10 h-10" />
+          <Link to={Routes.HOME}>
+            <img src={NameIcon} alt="_logo_" className="w-10 h-10" />
+          </Link>
         </span>
         <span className="uppercase text-green text-lg font-bold ">
           Let's meet you
@@ -39,7 +43,7 @@ export default function Name() {
           type="text"
           name="name_input"
           id="name_input"
-          className="w-full md:w-80 bg-white text-2xl placeholder:text-opacity-50 tracking-wider placeholder:tracking-wider placeholder:text-black-primary p-3 rounded-md border border-green text-black-primary my-3 font-bold focus:outline-0 focus:outline-offset-0"
+          className="w-full lg:max-w-sm bg-white text-2xl placeholder:text-opacity-50 tracking-wider placeholder:tracking-wider placeholder:text-black-primary p-3 rounded-md border border-green text-black-primary my-3 font-bold focus:outline-0 focus:outline-offset-0"
           onChange={setButtonDisabled}
           placeholder="Your name"
         />
