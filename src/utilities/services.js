@@ -8,8 +8,8 @@ export const getData = (endpoint, callback) => {
         dispatch(callback(data));
       })
       .catch((error) => {
-        console.error();
         dispatch(getError(error));
+        throw error;
       });
   };
 };
