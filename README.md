@@ -19,7 +19,7 @@ Development
 - Framework => ReactJS 
 - State Management => Redux tool kit
 - HTTP Interface client => Axios
-- Design => Material UI
+- Design => Material UI || Tailwind
 
 ### Deployment (heroku)
 -----------
