@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageLoader /> renders component correctly 1`] = `
+<div
+  class="h-screen flex justify-center items-center"
+>
+  <div
+    class="spinner"
+  >
+    <div
+      class="spinner-item"
+    />
+    <div
+      class="spinner-item"
+    />
+    <div
+      class="spinner-item"
+    />
+  </div>
+</div>
+`;
