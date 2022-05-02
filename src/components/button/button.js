@@ -50,7 +50,7 @@ export const OptButton = ({
         {...restProps}
       >
         {checked === value && (
-          <CheckOutlinedIcon className="checked-icon text-white absolute" />
+          <CheckOutlinedIcon className="checked-icon text-white absolute" data-testid="CheckOutlinedIcon"/>
         )}
         <span className="tracking-wider w-full text-center">{value}</span>
       </label>

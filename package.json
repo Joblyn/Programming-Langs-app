@@ -9,9 +9,6 @@
     "@mui/material": "^5.5.3",
     "@mui/styled-engine-sc": "^5.5.2",
     "@reduxjs/toolkit": "^1.8.1",
-    "@testing-library/jest-dom": "^5.16.3",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "node-sass": "^7.0.1",
     "react": "^18.0.0",
@@ -28,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +47,12 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^13.5.0",
+    "jest-dom": "^4.0.0",
+    "react-test-renderer": "^18.1.0",
+    "sass": "^1.51.0",
     "tailwindcss": "^3.0.23"
   }
 }

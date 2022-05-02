@@ -40,7 +40,7 @@ export default function Assessment() {
       setData(questions.data);
     }
     if (questions.isError) {
-      // console.log(questions.error);
+      console.error()
       setError({ type: "fetch error", message: error });
     }
   }, [questions, error]);
@@ -66,7 +66,7 @@ export default function Assessment() {
     }
   }, [count, remainder, quotient]);
 
-  // update state responses
+  // update responses state
   useEffect(() => {
     setResponses(function () {
       let obj = {};
@@ -79,7 +79,6 @@ export default function Assessment() {
   }, [questionsState, responseStore]);
 
   const nextQuestionsSet = () => {
-    // dispatch(updateResponses(responses));
     updateCount((count) => count + 1);
     if (remainder) {
       if (count === quotient) {
@@ -91,22 +90,14 @@ export default function Assessment() {
       setStartEnd(({ end }) => ({ start: end, end: end + 5 }));
       setError({});
     }
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo(0,0);
   };
 
   const previousQuestionSet = () => {
     updateCount((count) => count - 1);
     setStartEnd(({ start, end }) => ({ start: start - 5, end: end - 5 }));
     setError({});
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo(0,0);
   };
 
   const createCommponent = () => {

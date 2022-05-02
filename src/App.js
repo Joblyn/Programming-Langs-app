@@ -13,6 +13,7 @@ function App() {
   return (
     <AppContext.Provider value={{ route, setRoute, setName, name }}>
       <Routes>
+        <Route />
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.ASSESSMENT} exact element={<Layout />}>
           <Route path={ROUTES.LANGUAGE} exact element={<Assessment />} />

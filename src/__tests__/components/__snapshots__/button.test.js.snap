@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders the <Button /> with children 1`] = `
+<a
+  class="btn rounded-md px-1.5 md:px-2 py-1 md:py-1.5 mx-1 md:mx-2 bg-white text-green border border-green text-sm md:text-base hover:bg-lightgreen hover:text-green cursor-pointer transition-all inline-flex items-center justify-center select-none text-center md:h-10 w-20 shadow-md"
+  href="/signup"
+>
+  Sign up
+</a>
+`;
+
+exports[`<Button /> renders the <LargeButton /> 1`] = `
+<div
+  class="w-full lg:max-w-sm text-green border border-green bg-white active:scale-95 uppercase cursor-pointer hover:opacity-80  p-3 text-2xl flex justify-center items-center rounded-md my-3 btn"
+>
+  <span
+    class="px-[7px] font-bold tracking-wider"
+  >
+    Next
+  </span>
+</div>
+`;
+
+exports[`<Button /> renders the <LargeButton /> with type=next and disabled 1`] = `
+<div
+  class="w-full lg:max-w-sm text-white bg-green active:scale-95 uppercase cursor-not-allowed bg-opacity-50  p-3 text-2xl flex justify-center items-center rounded-md my-3 btn"
+>
+  <span
+    class="px-[7px] font-bold tracking-wider"
+  >
+    Next
+  </span>
+</div>
+`;
+
+exports[`<Button /> renders the <OptButton /> 1`] = `
+<div>
+  <div
+    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+  >
+    <label
+      class="w-full p-2.5 opt-label cursor-pointer relative"
+    >
+      <span
+        class="tracking-wider w-full text-center"
+      >
+        Yes
+      </span>
+    </label>
+  </div>
+  <div
+    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+  >
+    <label
+      class="w-full p-2.5 opt-label cursor-pointer relative"
+    >
+      <span
+        class="tracking-wider w-full text-center"
+      >
+        No
+      </span>
+    </label>
+  </div>
+  <div
+    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+  >
+    <label
+      class="w-full p-2.5 opt-label cursor-pointer relative"
+    >
+      <span
+        class="tracking-wider w-full text-center"
+      >
+        Maybe
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Button /> renders the large <Button /> 1`] = `
+<a
+  class="btn rounded-md p-3 mx-1 md:mx-2 bg-white text-green border border-green cursor-pointer transition-all hover:bg-lightgreen hover:text-green inline-flex items-center justify-center select-none text-center shadow-md md:w-80 w-52 uppercase text-2xl animation_click"
+  href="/signup"
+>
+  Sign up
+</a>
+`;
