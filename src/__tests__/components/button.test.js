@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-// import userEvent from '@testing-library/user-event'
-// import { createRoot } from "react-dom/client";
 import "@testing-library/jest-dom";
 import Button, { OptButton, LargeButton } from "../../components/button/button";
 

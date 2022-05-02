@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders the component correctly 1`] = `
+<div
+  class="flex flex-row justify-between px-2 md:px-4 py-3 shadow-sm border-green border-b fixed top-0 z-30 w-full bg-white header_grid"
+>
+  <div
+    class="w-fit"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="logo_icon"
+        class="w-6 h-6 md:w-10 md:h-10 align-middle"
+        src="logo.svg"
+      />
+    </a>
+  </div>
+  <div>
+    <h1
+      class="text-base md:text-xl lg:text-3xl tracking-wide font-bold text-center p-2 uppercase"
+    >
+      Software Interview Self Assessment
+    </h1>
+  </div>
+  <div
+    class="relative flex justify-end"
+  >
+    <span
+      class="toggle"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium text-green css-i4bv87-MuiSvgIcon-root"
+        data-testid="FormatAlignJustifyIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z"
+        />
+      </svg>
+    </span>
+  </div>
+</div>
+`;

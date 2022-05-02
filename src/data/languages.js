@@ -7,7 +7,7 @@ import MachineLearning from "../assets/images/machinelearning.jpeg";
 import DockerKubenetes from "../assets/images/docker-kubernetes.png";
 import ShellScripting from "../assets/images/shell_scripting.jpeg";
 
-const LanguageArray = [
+const Languages = [
   {
     "title": 'Shell Scripting',
     "image": ShellScripting,
@@ -58,4 +58,4 @@ const LanguageArray = [
   }
 ]
 
-export default LanguageArray;
+export default Languages;
