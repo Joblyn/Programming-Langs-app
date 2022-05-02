@@ -16,5 +16,6 @@ describe("<Personalise />", () => {
     );
     expect(getByAltText("_three bottles_")).toBeTruthy();
     expect(container.getElementsByTagName("p")[0].innerHTML).toEqual("Personalising for Joblyn");
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
