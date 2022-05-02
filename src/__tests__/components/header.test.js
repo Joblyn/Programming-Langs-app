@@ -1,16 +1,9 @@
 import React from "react";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import Header from "../../components/header/header";
 
 describe("<Header />", () => {
   afterEach(cleanup);
-
-  // useState
-  // const setShowBtns = jest.fn();
-  // const showBtns = jest.fn(false);
-  // const useStateSpy = jest.spyOn(React, "useState");
-  // useStateSpy.mockImplementation(() => [showBtns, setShowBtns]);
 
   // UI test
   it("renders the component correctly", () => {
