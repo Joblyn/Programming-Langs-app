@@ -6,6 +6,11 @@ import { AppContext } from "../../context/context";
 import CustomCard from "../../components/card/card";
 import * as Routes from "../../constants/routes";
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useHistory: () => ({}),
+}));
+
 describe("<CustomCard />", () => {
   afterEach(cleanup);
 

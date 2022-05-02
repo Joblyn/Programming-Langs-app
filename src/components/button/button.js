@@ -32,7 +32,6 @@ export const OptButton = ({
   action,
   innerText,
   href,
-  name,
   value,
   checked,
   setChecked,

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Personalise /> renders component correctly 1`] = `
+<div
+  class="h-full pt-10 w-full"
+>
+  <div
+    class="mb-4"
+  >
+    <img
+      alt="_three bottles_"
+      class="h-36 w-auto max-w-32"
+      src="personalise.avif"
+    />
+  </div>
+  <div
+    class="tracking-wider"
+  >
+    <p
+      class="text-lg font-bold tracking-wider"
+    >
+      Personalising for 
+      Joblyn
+    </p>
+  </div>
+</div>
+`;
