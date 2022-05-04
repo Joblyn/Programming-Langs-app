@@ -16,8 +16,8 @@ function App() {
         <Route />
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.ASSESSMENT} exact element={<Layout />}>
-          <Route path={ROUTES.LANGUAGE} exact element={<Assessment />} />
           <Route path={ROUTES.NAME} exact element={<Name />} />
+          <Route path={ROUTES.LANGUAGE} exact element={<Assessment />} />
         </Route>
         <Route path={ROUTES.NOMATCH} element={<PageNotFound />} />
       </Routes>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import Button from "../button/button";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -7,7 +7,7 @@ import "./header.scss";
 
 export default function Header() {
   const matches = useMediaQuery("(min-width:640px)");
-  const [showBtns, setShowBtns] = React.useState(false);
+  const [showBtns, setShowBtns] = useState(false);
 
   return (
     <div className="flex flex-row justify-between px-2 md:px-4 py-3 shadow-sm border-green border-b fixed top-0 z-30 w-full bg-white header_grid">

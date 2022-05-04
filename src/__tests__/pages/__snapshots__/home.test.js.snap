@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> rendering the home page 1`] = `
+<div
+  class="min-h-screen"
+>
+  <div
+    class="h-screen flex justify-center items-center"
+  >
+    <div
+      class="spinner"
+    >
+      <div
+        class="spinner-item"
+      />
+      <div
+        class="spinner-item"
+      />
+      <div
+        class="spinner-item"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Home /> rendering the home page 2`] = `
+<div>
+  <div
+    class="flex flex-row justify-between px-2 md:px-4 py-3 shadow-sm border-green border-b fixed top-0 z-30 w-full bg-white header_grid"
+  >
+    <div
+      class="w-fit"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="logo_icon"
+          class="w-6 h-6 md:w-10 md:h-10 align-middle"
+          src="logo.svg"
+        />
+      </a>
+    </div>
+    <div>
+      <h1
+        class="text-base md:text-xl lg:text-3xl tracking-wide font-bold text-center p-2 uppercase"
+      >
+        Software Interview Self Assessment
+      </h1>
+    </div>
+    <div
+      class="relative flex justify-end"
+    >
+      <span
+        class="toggle"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium text-green css-i4bv87-MuiSvgIcon-root"
+          data-testid="FormatAlignJustifyIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3 21h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18v-2H3v2zm0-4h18V7H3v2zm0-6v2h18V3H3z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <main
+    class="mt-[6rem] p-2 max-width-[1250px] flex justify-center"
+  >
+    <div
+      class="MuiBox-root css-i9gxme"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-md-3 css-1xgjpwf-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="Shell Scripting"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="shell_scripting.jpeg"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Shell Scripting
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="Java"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="java.jpeg"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Java
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="python"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="python.png"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Python
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="high level design"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="hld.png"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  High Level Design
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="algorithms"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="algorithms.png"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Algorithms
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="multithreading"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="multithreading.png"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Multi Threading
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="machine learning"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="machinelearning.jpeg"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Machine Learning
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4 MuiGrid-grid-sm-4 MuiGrid-grid-md-4 flex justify-center items-start css-iltpxr-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+              tabindex="0"
+              type="button"
+            >
+              <img
+                alt="docker & kubernetes"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                height="140"
+                src="docker-kubernetes.png"
+                style="height: 200px;"
+                width="345"
+              />
+              <div
+                class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+              >
+                <div
+                  class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+                >
+                  Docker & Kubenetes
+                </div>
+              </div>
+              <span
+                class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

@@ -2,13 +2,12 @@ import React, { useContext, useState } from "react";
 import NameIcon from "../assets/images/name_icon.svg";
 import { LargeButton } from "../components/button/button";
 import { AppContext } from "../context/context";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Routes from "../constants/routes";
 
 export default function Name() {
-  const { route } = useContext(AppContext);
-  const { setName } = useContext(AppContext);
+  const { route, setName } = useContext(AppContext);
   const navigate = useNavigate();
   const [disabled, setDisabled] = useState(true);
 
@@ -19,6 +18,10 @@ export default function Name() {
       setName(target.value);
       setDisabled(false);
     }
+  };
+
+  const handleNavigate = () => {
+    navigate(`/assessment/${route}`);
   };
 
   return (
@@ -51,7 +54,7 @@ export default function Name() {
           <LargeButton
             type="next"
             disabled={disabled}
-            onClick={disabled ? null : () => navigate(`/assessment/${route}`)}
+            onClick={disabled ? null : handleNavigate}
             innerText="Next"
           />
         </div>

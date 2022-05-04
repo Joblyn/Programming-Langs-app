@@ -1,10 +1,12 @@
 import React from "react";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import { BrowserRouter, MemoryRouter, Router } from "react-router-dom";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import Languages from "../../data/languages";
 import { AppContext } from "../../context/context";
 import CustomCard from "../../components/card/card";
 import * as Routes from "../../constants/routes";
+import "@testing-library/jest-dom";
+import { Route } from "@mui/icons-material";
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -44,9 +46,9 @@ describe("<CustomCard />", () => {
   });
 
   // functionality test - update route on click and change pathname to "name"
-  it("setst the route upon click and changes pathname to name", async () => {
+  it("sets the route upon click and changes pathname to name", async () => {
     const { container, getByText } = render(
-      <MemoryRouter initialEntries={[Routes.HOME]}>
+      <Router>
         <AppContext.Provider value={{ setRoute }}>
           <CustomCard
             title={Languages[0].title}
@@ -55,7 +57,7 @@ describe("<CustomCard />", () => {
             href={Languages[0].href}
           />
         </AppContext.Provider>
-      </MemoryRouter>
+      </Router>
     );
 
     let button = container.getElementsByTagName("button");
