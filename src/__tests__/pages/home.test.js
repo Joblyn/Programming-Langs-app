@@ -1,6 +1,5 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
 
@@ -11,7 +10,7 @@ import Languages from "../../data/languages";
 import { AppContext } from "../../context/context";
 import App from "../../App";
 
-// mock usestate setstate from React
+// mock useState setState from React
 const setStateMock = jest.fn();
 const useStateMock = (useState) => [useState, setStateMock];
 jest.spyOn(React, "useState").mockImplementation(useStateMock);
@@ -26,7 +25,7 @@ jest.mock("react-router-dom", () => ({
   useNavigate: () => mockedNavigate,
 }));
 
-// testing the app at the homepage (/)
+// test the app at the homepage (/)
 describe("<Home />", () => {
   afterEach(cleanup);
 
@@ -72,7 +71,7 @@ describe("<Home />", () => {
     jest.useFakeTimers();
 
     const history = createMemoryHistory();
-    const { container, getByTestId } = render(
+    const { container } = render(
       <Router location={history.location} navigator={history}>
         <App />
       </Router>
@@ -82,7 +81,6 @@ describe("<Home />", () => {
       jest.advanceTimersByTime(2000);
     });
 
-    const user = userEvent.setup();
     // click on a language/card
     const cardButton = container.getElementsByTagName("button")[0];
     expect(cardButton.getAttribute("type")).toBe("button");

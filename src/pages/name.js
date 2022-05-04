@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import NameIcon from "../assets/images/name_icon.svg";
 import { LargeButton } from "../components/button/button";
 import { AppContext } from "../context/context";
-// import { useNavigate } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 import * as Routes from "../constants/routes";
 
@@ -49,6 +48,7 @@ export default function Name() {
           className="w-full lg:max-w-sm bg-white text-2xl placeholder:text-opacity-50 tracking-wider placeholder:tracking-wider placeholder:text-black-primary p-3 rounded-md border border-green text-black-primary my-3 font-bold focus:outline-0 focus:outline-offset-0"
           onChange={setButtonDisabled}
           placeholder="Your name"
+          data-testid="name_input"
         />
         <div className="flex">
           <LargeButton
