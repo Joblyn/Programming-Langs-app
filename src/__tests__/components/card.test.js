@@ -1,33 +1,37 @@
 import React from "react";
-import { BrowserRouter, MemoryRouter, Router } from "react-router-dom";
+import { Router } from "react-router-dom";
 import { render, cleanup, fireEvent } from "@testing-library/react";
 import Languages from "../../data/languages";
 import { AppContext } from "../../context/context";
 import CustomCard from "../../components/card/card";
-import * as Routes from "../../constants/routes";
 import "@testing-library/jest-dom";
-import { Route } from "@mui/icons-material";
+import { createMemoryHistory } from "history";
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useHistory: () => ({}),
+// mock react-router-dom
+jest.mock("react-router-dom");
+
+// mock useNavigate from React
+const mockedNavigate = jest.fn();
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedNavigate,
 }));
 
+// mock useState setState from React
+const setRoute = jest.fn();
+const useStateMock = jest.spyOn(React, "useState");
+useStateMock.mockImplementation((initialState) => [initialState, setRoute]);
+
+// testing card component
 describe("<CustomCard />", () => {
   afterEach(cleanup);
 
-  // useState jest mock
-  const setRoute = jest.fn();
-  const useStateSpy = jest.spyOn(React, "useState");
-  useStateSpy.mockImplementation((initialState = "/") => [
-    initialState,
-    setRoute,
-  ]);
-
   // UI test
   it("renders the component correctly", () => {
-    const { container, getByText } = render(
-      <BrowserRouter>
+    // initial memoryHistory
+    const history = createMemoryHistory();
+    const { container, getByText, getByAltText } = render(
+      <Router location={history.location}>
         <AppContext.Provider value={{ setRoute }}>
           <CustomCard
             title={Languages[0].title}
@@ -35,20 +39,21 @@ describe("<CustomCard />", () => {
             alt={Languages[0].alt}
           />
         </AppContext.Provider>
-      </BrowserRouter>
+      </Router>
     );
 
     expect(getByText(Languages[0].title)).toBeTruthy();
-    expect(getAllByAltText(Languages[0].alt)).toBeTruthy();
+    expect(getByAltText(Languages[0].alt)).toBeTruthy();
     expect(container.firstChild.matches(".custom-card")).toBeTruthy();
-    expect(container.firstChild.style.maxWidth === "345px").toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  // functionality test - update route on click and change pathname to "name"
+  // triggers setRoute upon click
   it("sets the route upon click and changes pathname to name", async () => {
+     // initialise memoryHistory
+     const history = createMemoryHistory();
     const { container, getByText } = render(
-      <Router>
+      <Router location={history.location} navigator={history}>
         <AppContext.Provider value={{ setRoute }}>
           <CustomCard
             title={Languages[0].title}
@@ -60,9 +65,11 @@ describe("<CustomCard />", () => {
       </Router>
     );
 
-    let button = container.getElementsByTagName("button");
+    let button = container.getElementsByTagName("button")[0];
     await fireEvent.click(button);
-    expect(location.pathname === "/assessment/name").toBeTruthy();
+
+    // check that the route is set
     expect(setRoute).toHaveBeenCalledWith(Languages[0].href);
+    expect(mockedNavigate).toHaveBeenCalledWith("/assessment/name");
   });
 });

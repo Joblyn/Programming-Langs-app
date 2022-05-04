@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomCard /> renders the component correctly 1`] = `
+<div
+  class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root w-80 custom-card css-1ri6ub7-MuiPaper-root-MuiCard-root"
+>
+  <button
+    class="MuiButtonBase-root MuiCardActionArea-root css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root"
+    tabindex="0"
+    type="button"
+  >
+    <img
+      alt="Shell Scripting"
+      class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+      height="140"
+      src="shell_scripting.jpeg"
+      style="height: 200px;"
+      width="345"
+    />
+    <div
+      class="MuiCardContent-root bg-white css-46bh2p-MuiCardContent-root"
+    >
+      <div
+        class="MuiTypography-root MuiTypography-p MuiTypography-gutterBottom text-xl css-anmq6p-MuiTypography-root"
+      >
+        Shell Scripting
+      </div>
+    </div>
+    <span
+      class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+    />
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
