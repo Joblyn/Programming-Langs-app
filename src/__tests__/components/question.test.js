@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup, fireEvent } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import Question from "../../components/question/question";
 import { Provider } from "react-redux";
 import { store } from "../../utilities/redux/store";
