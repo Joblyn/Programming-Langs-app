@@ -36,7 +36,7 @@ exports[`<Button /> renders the <LargeButton /> with type=next and disabled 1`] 
 exports[`<Button /> renders the <OptButton /> 1`] = `
 <div>
   <div
-    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
   >
     <label
       class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -49,7 +49,7 @@ exports[`<Button /> renders the <OptButton /> 1`] = `
     </label>
   </div>
   <div
-    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
   >
     <label
       class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -62,7 +62,7 @@ exports[`<Button /> renders the <OptButton /> 1`] = `
     </label>
   </div>
   <div
-    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+    class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
   >
     <label
       class="w-full p-2.5 opt-label cursor-pointer relative"

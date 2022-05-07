@@ -8,7 +8,7 @@ exports[`<Question /> renders component correctly 1`] = `
     class="mb-4 flex flex-row items-start"
   >
     <span
-      class="text-lg mr-3 mt-1"
+      class="text-lg mr-3 mt-1 question_number"
     >
       NaN
       .
@@ -23,7 +23,7 @@ exports[`<Question /> renders component correctly 1`] = `
     class="mt-2 px-6"
   >
     <div
-      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
     >
       <label
         class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -36,7 +36,7 @@ exports[`<Question /> renders component correctly 1`] = `
       </label>
     </div>
     <div
-      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
     >
       <label
         class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -49,7 +49,7 @@ exports[`<Question /> renders component correctly 1`] = `
       </label>
     </div>
     <div
-      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
     >
       <label
         class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -73,7 +73,7 @@ exports[`<Question /> renders with defaultValue prop 1`] = `
     class="mb-4 flex flex-row items-start"
   >
     <span
-      class="text-lg mr-3 mt-1"
+      class="text-lg mr-3 mt-1 question_number"
     >
       NaN
       .
@@ -88,7 +88,7 @@ exports[`<Question /> renders with defaultValue prop 1`] = `
     class="mt-2 px-6"
   >
     <div
-      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont checked opt-cont active:scale-95"
+      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative checked opt-cont active:scale-95"
     >
       <label
         class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -112,7 +112,7 @@ exports[`<Question /> renders with defaultValue prop 1`] = `
       </label>
     </div>
     <div
-      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
     >
       <label
         class="w-full p-2.5 opt-label cursor-pointer relative"
@@ -125,7 +125,7 @@ exports[`<Question /> renders with defaultValue prop 1`] = `
       </label>
     </div>
     <div
-      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont  opt-cont active:scale-95"
+      class="w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative  opt-cont active:scale-95"
     >
       <label
         class="w-full p-2.5 opt-label cursor-pointer relative"

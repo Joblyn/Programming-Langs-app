@@ -3,14 +3,12 @@ import {
   render,
   cleanup,
   fireEvent,
-  getByPlaceholderText,
 } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
 import "@testing-library/jest-dom";
 import { Name } from "../../pages";
 import { AppContext } from "../../context/context";
-import App from "../../App";
 import { act } from "react-dom/test-utils";
 
 // mock useNavigate from React
@@ -68,7 +66,7 @@ describe("<Name />", () => {
     const setName = () => {};
     // jest.spyOn(setName);
     const history = createMemoryHistory();
-    const { container, getByText, getByAltText, getByTestId } = render(
+    const { container, getByText, getByTestId } = render(
       <Router location={history.location} navigator={history}>
         <AppContext.Provider value={{ route, setName }}>
           <Name />

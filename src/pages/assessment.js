@@ -90,19 +90,17 @@ export default function Assessment() {
       setStartEnd(({ end }) => ({ start: end, end: end + 5 }));
       setError({});
     }
-    window.scrollTo(0,0);
   };
 
   const previousQuestionSet = () => {
     updateCount((count) => count - 1);
     setStartEnd(({ start, end }) => ({ start: start - 5, end: end - 5 }));
     setError({});
-    window.scrollTo(0,0);
   };
 
   const createCommponent = () => {
     const getProps = (questions, id) => ({
-      className: id === questions.length - 1 ? "pb-[173px] md:pb-[100px]" : "",
+      className: id === questions.length - 1 ? "pb-[173px] md:pb-[100px] question_container" : "question_container",
       key: "question_" + id,
     });
     return questionsState.map((question, id) => {

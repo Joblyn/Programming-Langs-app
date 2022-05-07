@@ -39,7 +39,7 @@ export const OptButton = ({
 }) => {
   return (
     <div
-      className={`w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primaryrelative opt-cont ${
+      className={`w-full lg:max-w-sm rounded-md bg-white border border-green text-lg flex justify-center items-center my-2 btn hover:bg-green hover:text-white text-black-primary relative ${
         checked === value ? "checked" : ""
       } opt-cont active:scale-95`}
     >

@@ -1,8 +1,4 @@
+import { createAction } from "@reduxjs/toolkit";
 import * as ActionTypes from "../../../constants/actionTypes";
 
-export const updateResponses = (payload) => {
-  return {
-    type: ActionTypes.UPDATE_RESPONSES,
-    payload
-  }
-}
+export const updateResponses = createAction(ActionTypes.UPDATE_RESPONSES);

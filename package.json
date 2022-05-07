@@ -24,9 +24,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
+    "jest": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -46,10 +46,35 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.js",
+      "!<rootDir>/src/app.js",
+      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/constants/*.js",
+      "!<rootDir>/src/context/*.js",
+      "!<rootDir>/src/data/*.js",
+      "!<rootDir>/src/pages/*.js",
+      "!<rootDir>/src/utilities/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.1.1",
+    "jest": "^28.0.3",
     "jest-dom": "^4.0.0",
     "react-test-renderer": "^18.1.0",
     "sass": "^1.51.0",
