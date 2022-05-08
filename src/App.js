@@ -8,7 +8,16 @@ import { AppContext } from "./context/context";
 import ReactGA from "react-ga";
 
 // initialize google analytics
-const TRACKING_ID = "G-L3SYMZVBRR";
+let TRACKING_ID;
+if (location.hostname === "woshipfrontend.interviewblindspots.com") {
+  TRACKING_ID = "G-QW0ZP2JZHF";
+} else {
+  if (location.hostname === "damp-shore-08296.herokuapp.com") {
+    TRACKING_ID = "G-L3SYMZVBRR";
+  } else {
+    TRACKING_ID = "G-8WCMDG75N4";
+  }
+}
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
@@ -17,12 +26,12 @@ function App() {
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
+  }, []);
 
   return (
     <AppContext.Provider value={{ route, setRoute, setName, name }}>
       <Routes>
-        <Route index element={<Home />}/>
+        <Route index element={<Home />} />
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.ASSESSMENT} exact element={<Layout />}>
           <Route path={ROUTES.NAME} exact element={<Name />} />
