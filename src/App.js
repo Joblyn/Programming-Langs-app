@@ -9,10 +9,10 @@ import ReactGA from "react-ga";
 
 // initialize google analytics
 let TRACKING_ID;
-if (location.hostname === "woshipfrontend.interviewblindspots.com") {
+if (window.location.hostname === "woshipfrontend.interviewblindspots.com") {
   TRACKING_ID = "G-QW0ZP2JZHF";
 } else {
-  if (location.hostname === "damp-shore-08296.herokuapp.com") {
+  if (window.location.hostname === "damp-shore-08296.herokuapp.com") {
     TRACKING_ID = "G-L3SYMZVBRR";
   } else {
     TRACKING_ID = "G-8WCMDG75N4";
